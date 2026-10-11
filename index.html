@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar DM Sans - HTML CSS JS</title>
+    
+    <!-- 1. Hubungkan Google Fonts (DM Sans) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <!-- 2. CSS untuk Gaya dan Tampilan -->
+    <style>
+        body {
+            /* Terapkan font DM Sans ke seluruh halaman */
+            font-family: 'DM Sans', sans-serif;
+            background-color: #f4f7f6;
+            color: #333333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-weight: 700; /* Tebal */
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-weight: 400; /* Normal */
+            color: #666666;
+            line-height: 1.6;
+        }
+
+        button {
+            font-family: 'DM Sans', sans-serif; /* Pastikan tombol juga pakai DM Sans */
+            font-weight: 500;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Struktur HTML -->
+    <div class="card">
+        <h1 id="judul">Halo Dunia!</h1>
+        <p>Halaman ini menggunakan font <strong>DM Sans</strong>. Font ini sangat rapi dan mudah dibaca di layar digital.</p>
+        <button id="tombolAksi">Klik Saya</button>
+    </div>
+
+    <!-- 3. JavaScript untuk Interaksi -->
+    <script>
+        const tombol = document.getElementById('tombolAksi');
+        const judul = document.getElementById('judul');
+
+        // Menambahkan interaksi ketika tombol diklik
+        tombol.addEventListener('click', () => {
+            judul.innerText = "Keren, JavaScript Bekerja!";
+            judul.style.color = "#28a745"; // Mengubah warna judul menjadi hijau
+            tombol.innerText = "Berhasil!";
+            tombol.style.backgroundColor = "#28a745";
+        });
+    </script>
+
+</body>
+</html>
